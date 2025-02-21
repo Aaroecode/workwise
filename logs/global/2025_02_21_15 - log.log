@@ -1,0 +1,27 @@
+02/21/2025 15:57:30 - CRITICAL - Global - Uncaught Exception
+Traceback (most recent call last):
+  File "c:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\app\main.py", line 1, in <module>
+    from api.prediction import router
+  File "c:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\app\api\prediction.py", line 6, in <module>
+    import config
+  File "c:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\app\config.py", line 9, in <module>
+    elastic = Elastic("85.202.160.193", "elastic", elastic_password)
+  File "c:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\app\database\elasticsearching.py", line 9, in __init__
+    super().__init__(hosts=[host], http_auth=(username, password), verify_certs=True, ca_certs=cert_path)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\ww\Lib\site-packages\elasticsearch\_sync\client\__init__.py", line 339, in __init__
+    node_configs = client_node_configs(
+        hosts,
+    ...<12 lines>...
+        ssl_show_warn=ssl_show_warn,
+    )
+  File "C:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\ww\Lib\site-packages\elasticsearch\_sync\client\utils.py", line 119, in client_node_configs
+    node_configs = hosts_to_node_configs(hosts)
+  File "C:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\ww\Lib\site-packages\elasticsearch\_sync\client\utils.py", line 165, in hosts_to_node_configs
+    node_configs.append(url_to_node_config(host))
+                        ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\LAKSHAY CHHABRA\Desktop\KRMU hackathon\ww\Lib\site-packages\elastic_transport\client_utils.py", line 215, in url_to_node_config
+    raise ValueError(
+        "URL must include a 'scheme', 'host', and 'port' component (ie 'https://localhost:9200')"
+    )
+ValueError: URL must include a 'scheme', 'host', and 'port' component (ie 'https://localhost:9200')
